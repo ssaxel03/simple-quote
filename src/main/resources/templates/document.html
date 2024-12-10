@@ -1,0 +1,70 @@
+<!DOCTYPE html >
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" th:href="@{/css/output.css}">
+  <link rel="stylesheet" th:href="@{css/custom.css}">
+</head>
+<body class="text-white bg-neutral-800 flex justify-center items-center flex-col min-h-screen">
+
+<header class="p-6">
+  <a th:href="@{/}">
+    <img class="max-h-32 max-w-32" th:src="@{images/logo.png}" alt="Simple Quotes logo image">
+  </a>
+</header>
+<main class="flex flex-wrap flex-grow content-center justify-center w-full">
+  <div class="bg-neutral-700 p-8 rounded-lg shadow-lg w-11/12 max-w-2xl">
+
+    <h2 class="text-2xl font-medium text-center text-brand mb-6">Document items</h2>
+
+    <!-- Company details Form -->
+    <div class="mb-4 overflow-x-auto">
+
+      <table class="table-auto w-full overflow-scroll">
+        <thead>
+          <tr class="bg-brand">
+            <th scope="col" class="py-2 px-3 border border-neutral-800 text-left text-brandbuttontext">Item description</th>
+            <th scope="col" class="py-2 px-3 border border-neutral-800 text-left text-brandbuttontext">Unit price</th>
+            <th scope="col" class="py-2 px-3 border border-neutral-800 text-left text-brandbuttontext">Tax rate</th>
+            <th scope="col" class="py-2 px-3 border border-neutral-800 text-left text-brandbuttontext">Quantity</th>
+            <th scope="col" class="py-2 px-3 border border-neutral-800 text-left text-brandbuttontext">Final price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="py-2 px-4 border border-neutral-800 text-left text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sollicitudin est dui, eget egestas felis condimentum eu. Maecenas ornare libero.</td>
+            <td class="py-2 px-4 border border-neutral-800 text-left text-white">20</td>
+            <td class="py-2 px-4 border border-neutral-800 text-left text-white">5</td>
+            <td class="py-2 px-4 border border-neutral-800 text-left text-white">10</td>
+            <td class="py-2 px-4 border border-neutral-800 text-left text-white">210</td>
+          </tr>
+          <tr>
+            <td class="py-2 px-4 border border-neutral-800 text-left text-white">MÃO DE OBRA</td>
+            <td class="py-2 px-4 border border-neutral-800 text-left text-white">20</td>
+            <td class="py-2 px-4 border border-neutral-800 text-left text-white">0</td>
+            <td class="py-2 px-4 border border-neutral-800 text-left text-white">20</td>
+            <td class="py-2 px-4 border border-neutral-800 text-left text-white">400</td>
+          </tr>
+        </tbody>
+
+      </table>
+
+      <!-- Generate PDF Button -->
+
+    </div>
+
+      <button type="submit" class="mb-4 w-full bg-brand hover:bg-brandhover text-brandbuttontext font-light py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+        GENERATE PDF
+      </button>
+
+  </div>
+</main>
+
+<footer class="p-6 text-white">
+  Made by <a class="text-brand" href="https://github.com/ssaxel03">Axel</a>
+</footer>
+
+</body>
+</html>
