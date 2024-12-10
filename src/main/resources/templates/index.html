@@ -1,10 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Index</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" th:href="@{/css/output.css}">
+    <link rel="stylesheet" th:href="@{css/custom.css}">
 </head>
-<body>
+<body class="text-white bg-neutral-800 flex justify-center items-center flex-col min-h-screen">
+
+<header class="p-6">
+    <a th:href="@{/}">
+        <img class="max-h-32 max-w-32" th:src="@{images/logo.png}" alt="Simple Quotes logo image">
+    </a>
+</header>
+
+<main class="flex-grow content-center">
+
+    <div class="bg-neutral-700 p-8 rounded-lg shadow-lg sm:min-w-11/12 md:w-96">
+
+        <h2 class="text-2xl font-bold text-center text-brand mb-4">Welcome </h2>
+
+        <form class="mb-0" th:action="@{/document/new}" method="post">
+            <div>
+                <button type="submit" class="mb-2 w-full bg-brand hover:bg-brandhover text-brandbuttontext font-light py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                    NEW DOCUMENT
+                </button>
+            </div>
+        </form>
+
+        <form class="mb-0" th:action="@{/items/edit}" method="post">
+            <div>
+                <button type="submit" class="mb-4 w-full bg-brand hover:bg-brandhover text-brandbuttontext font-light py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                    EDIT ITEMS
+                </button>
+            </div>
+        </form>
+
+    </div>
+
+</main>
+
+<footer class="p-6 text-white">
+    Made by <a class="text-brand" href="https://github.com/ssaxel03">Axel</a>
+</footer>
 
 </body>
 </html>

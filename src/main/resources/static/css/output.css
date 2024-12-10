@@ -554,16 +554,12 @@ video {
   display: none;
 }
 
-.absolute {
-  position: absolute;
+.mb-0 {
+  margin-bottom: 0px;
 }
 
-.top-0 {
-  top: 0px;
-}
-
-.bottom-0 {
-  bottom: 0px;
+.mb-2 {
+  margin-bottom: 0.5rem;
 }
 
 .mb-4 {
@@ -586,10 +582,6 @@ video {
   display: flex;
 }
 
-.max-h-52 {
-  max-height: 13rem;
-}
-
 .max-h-32 {
   max-height: 8rem;
 }
@@ -598,12 +590,24 @@ video {
   min-height: 100vh;
 }
 
-.w-96 {
-  width: 24rem;
-}
-
 .w-full {
   width: 100%;
+}
+
+.max-w-32 {
+  max-width: 8rem;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.content-center {
+  align-content: center;
 }
 
 .items-center {
@@ -650,20 +654,12 @@ video {
   background-color: rgb(38 38 38 / var(--tw-bg-opacity, 1));
 }
 
+.p-6 {
+  padding: 1.5rem;
+}
+
 .p-8 {
   padding: 2rem;
-}
-
-.p-96 {
-  padding: 24rem;
-}
-
-.p-20 {
-  padding: 5rem;
-}
-
-.p-10 {
-  padding: 2.5rem;
 }
 
 .px-3 {
@@ -681,6 +677,10 @@ video {
   padding-bottom: 0.5rem;
 }
 
+.text-left {
+  text-align: left;
+}
+
 .text-center {
   text-align: center;
 }
@@ -690,9 +690,23 @@ video {
   line-height: 2rem;
 }
 
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+
+.font-bold {
+  font-weight: 700;
 }
 
 .font-light {
@@ -703,9 +717,19 @@ video {
   font-weight: 500;
 }
 
+.text-brand {
+  --tw-text-opacity: 1;
+  color: rgb(157 225 61 / var(--tw-text-opacity, 1));
+}
+
 .text-brandbuttontext {
   --tw-text-opacity: 1;
   color: rgb(62 89 24 / var(--tw-text-opacity, 1));
+}
+
+.text-gray-900 {
+  --tw-text-opacity: 1;
+  color: rgb(17 24 39 / var(--tw-text-opacity, 1));
 }
 
 .text-red-500 {
@@ -716,11 +740,6 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-}
-
-.text-brand {
-  --tw-text-opacity: 1;
-  color: rgb(157 225 61 / var(--tw-text-opacity, 1));
 }
 
 .shadow-lg {
@@ -755,9 +774,8 @@ video {
   --tw-ring-color: rgb(99 102 241 / var(--tw-ring-opacity, 1));
 }
 
-@media (min-width: 640px) {
-  .sm\:text-sm {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
+@media (min-width: 768px) {
+  .md\:w-96 {
+    width: 24rem;
   }
 }

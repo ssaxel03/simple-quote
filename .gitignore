@@ -1,3 +1,18 @@
+# Node modules
+node_modules/
+
+# npm log files
+npm-debug.log*
+
+# OS-specific files
+.DS_Store
+
+# npm cache directory
+.npm/
+
+# Temporary files
+*.swp
+
 ### ENV ###
 .env
 
