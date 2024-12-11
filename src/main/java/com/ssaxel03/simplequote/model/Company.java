@@ -4,27 +4,10 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
-
-import java.util.Date;
 
 @Entity
 @Table(name = "company")
-public class Company {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    @Version
-    private Integer version;
-
-    @CreationTimestamp
-    private Date creationTime;
-
-    @UpdateTimestamp
-    private Date updateTime;
+public class Company extends AbstractModel{
 
     @NotNull
     @NotBlank
@@ -49,38 +32,6 @@ public class Company {
     @NotNull
     @NotBlank
     private String taxNumber;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Integer getVersion() {
-        return version;
-    }
-
-    public void setVersion(Integer version) {
-        this.version = version;
-    }
-
-    public Date getCreationTime() {
-        return creationTime;
-    }
-
-    public void setCreationTime(Date creationTime) {
-        this.creationTime = creationTime;
-    }
-
-    public Date getUpdateTime() {
-        return updateTime;
-    }
-
-    public void setUpdateTime(Date updateTime) {
-        this.updateTime = updateTime;
-    }
 
     public String getName() {
         return name;
@@ -141,9 +92,9 @@ public class Company {
     @Override
     public String toString() {
         return "Company{" +
-                "id=" + id +
-                ", creationTime=" + creationTime +
-                ", updateTime=" + updateTime +
+                "id=" + getId() +
+                ", creationTime=" + getCreationTime() +
+                ", updateTime=" + getUpdateTime() +
                 ", name=" + name +
                 ", address=" + address +
                 ", phone=" + phone +
