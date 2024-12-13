@@ -18,3 +18,8 @@
 .separator:not(:empty)::after {
     margin-left: 1.5em;
 }
+
+html, body {
+    width: 100%;
+    height: 100%;
+}

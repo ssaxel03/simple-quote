@@ -7,55 +7,122 @@
   <link rel="stylesheet" th:href="@{/css/output.css}">
   <link rel="stylesheet" th:href="@{css/custom.css}">
 </head>
-<body class="text-white bg-neutral-800 flex justify-center items-center flex-col min-h-screen">
+<body class="text-white bg-neutral-800 flex justify-center items-center flex-col min-h-screen h-auto w-full">
 
 <header class="p-6">
   <a th:href="@{/}">
     <img class="max-h-32 max-w-32" th:src="@{images/logo.png}" alt="Simple Quotes logo image">
   </a>
 </header>
-<main class="flex flex-wrap flex-grow content-center justify-center w-full">
-  <div class="bg-neutral-700 p-8 rounded-lg shadow-lg w-11/12 max-w-2xl">
+<main class="flex flex-wrap flex-1 w-full h-full min-h-0 justify-center items-center p-8">
+  <div class="bg-neutral-700 p-8 rounded-lg shadow-lg w-11/12 max-w-7xl min-h-full">
 
-    <h2 class="text-2xl font-medium text-center text-brand mb-6">Document items</h2>
 
-    <!-- Company details Form -->
+
+    <h2 class="text-2xl font-medium text-brand mb-4">Client details</h2>
+
+    <div class="inline-flex flex-row flex-wrap w-full mb-6 space-between gap-2 lg:gap-0">
+
+      <div class="flex flex-wrap flex-col w-full lg:w-3/12 px-3">
+        <label for="clientName" class="block text-base font-regular">Client name</label>
+        <input type="text" name="clientName" id="clientName" placeholder="John Doe" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-gray-900" required>
+      </div>
+
+      <div class="flex flex-wrap flex-col w-full lg:w-3/12 px-3">
+        <label for="clientAddress" class="block text-base font-regular">Client address</label>
+        <input type="text" name="clientAddress" id="clientAddress" placeholder="Business Road 123 City" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-gray-900" required>
+      </div>
+
+      <div class="flex flex-wrap flex-col w-full lg:w-3/12 px-3">
+        <label for="clientEmail" class="block text-base font-regular">Client email</label>
+        <input type="text" name="clientEmail" id="clientEmail" placeholder="jdoe@simplequotes.com" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-gray-900" required>
+      </div>
+
+      <div class="flex flex-wrap flex-col w-full lg:w-3/12 px-3">
+        <label for="clientPhone" class="block text-base font-regular">Client phone number</label>
+        <input type="text" name="clientPhone" id="clientPhone" placeholder="+351912345678" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-gray-900" required>
+      </div>
+
+    </div>
+
+    <h2 class="text-2xl font-medium text-brand mb-4">Document items</h2>
+
     <div class="mb-4 overflow-x-auto">
 
       <table class="table-auto w-full overflow-scroll">
         <thead>
           <tr class="bg-brand">
-            <th scope="col" class="py-2 px-3 border border-neutral-800 text-left text-brandbuttontext">Item description</th>
-            <th scope="col" class="py-2 px-3 border border-neutral-800 text-left text-brandbuttontext">Unit price</th>
-            <th scope="col" class="py-2 px-3 border border-neutral-800 text-left text-brandbuttontext">Tax rate</th>
-            <th scope="col" class="py-2 px-3 border border-neutral-800 text-left text-brandbuttontext">Quantity</th>
-            <th scope="col" class="py-2 px-3 border border-neutral-800 text-left text-brandbuttontext">Final price</th>
+            <th scope="col" class="py-2 px-3 border border-neutral-800 text-left text-brandbuttontext w-6/12">Item description</th>
+            <th scope="col" class="py-2 px-3 border border-neutral-800 text-left text-brandbuttontext w-1/12">Unit price</th>
+            <th scope="col" class="py-2 px-3 border border-neutral-800 text-left text-brandbuttontext w-1/12">Tax rate</th>
+            <th scope="col" class="py-2 px-3 border border-neutral-800 text-left text-brandbuttontext w-1/12">Quantity</th>
+            <th scope="col" class="py-2 px-3 border border-neutral-800 text-left text-brandbuttontext w-2/12">Final price</th>
+            <th scope="col" class="py-2 px-3 border border-neutral-800 text-left text-brandbuttontext w-1/12">DELETE</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td class="py-2 px-4 border border-neutral-800 text-left text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sollicitudin est dui, eget egestas felis condimentum eu. Maecenas ornare libero.</td>
-            <td class="py-2 px-4 border border-neutral-800 text-left text-white">20</td>
-            <td class="py-2 px-4 border border-neutral-800 text-left text-white">5</td>
-            <td class="py-2 px-4 border border-neutral-800 text-left text-white">10</td>
-            <td class="py-2 px-4 border border-neutral-800 text-left text-white">210</td>
+          <tr class="max-h-36">
+            <td class="py-2 px-4 border border-neutral-800 text-left text-white w-6/12">ABRAÇADEIRA REFORÇADA M8 INOX 304 54"</td>
+            <td class="py-2 px-4 border border-neutral-800 text-left text-white">
+              <input type="text" placeholder="John Doe" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-gray-900" required>
+            </td>
+            <td class="py-2 px-4 border border-neutral-800 text-left text-white">
+              <input type="text" placeholder="John Doe" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-gray-900" required>
+            </td>
+            <td class="py-2 px-4 border border-neutral-800 text-left text-white">
+              <input type="text" placeholder="John Doe" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-gray-900" required>
+            </td>
+            <td class="py-2 px-4 border border-neutral-800 text-left text-white">
+              <input type="text" placeholder="John Doe" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-gray-900" required>
+            </td>
+            <td class="py-2 px-4 border border-neutral-800 text-left text-white w-1/12">
+              <button type="submit" class="mb-0 w-full bg-red-500 hover:bg-red-700 text-red-800 font-light py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                DELETE
+              </button>
+            </td>
+          </tr>
+          <tr class="max-h-36">
+            <td class="py-2 px-4 border border-neutral-800 text-left text-white w-6/12 overflow-x-auto">MÃO DE OBRA</td>
+            <td class="py-2 px-4 border border-neutral-800 text-left text-white">
+              <input type="text" placeholder="John Doe" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-gray-900" required>
+            </td>
+            <td class="py-2 px-4 border border-neutral-800 text-left text-white">
+              <input type="text" placeholder="John Doe" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-gray-900" required>
+            </td>
+            <td class="py-2 px-4 border border-neutral-800 text-left text-white">
+              <input type="text" placeholder="John Doe" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-gray-900" required>
+            </td>
+            <td class="py-2 px-4 border border-neutral-800 text-left text-white">
+              <input type="text" placeholder="John Doe" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-gray-900" required>
+            </td>
+            <td class="py-2 px-4 border border-neutral-800 text-left text-white w-1/12">
+              <button type="submit" class="mb-0 w-full bg-red-500 hover:bg-red-700 text-red-800 font-light py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                DELETE
+              </button>
+            </td>
           </tr>
           <tr>
-            <td class="py-2 px-4 border border-neutral-800 text-left text-white">MÃO DE OBRA</td>
-            <td class="py-2 px-4 border border-neutral-800 text-left text-white">20</td>
-            <td class="py-2 px-4 border border-neutral-800 text-left text-white">0</td>
-            <td class="py-2 px-4 border border-neutral-800 text-left text-white">20</td>
-            <td class="py-2 px-4 border border-neutral-800 text-left text-white">400</td>
+            <td><p hidden>blank</p></td>
+            <td><p hidden>blank</p></td>
+            <td><p hidden>blank</p></td>
+            <td class="py-2 px-4 border border-neutral-800 text-left text-white">Total: </td>
+            <td class="py-2 px-4 border border-neutral-800 text-left text-white">
+              <input type="text" placeholder="Total" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-gray-900" required>
+            </td>
+
           </tr>
         </tbody>
 
       </table>
-
       <!-- Generate PDF Button -->
 
     </div>
 
-      <button type="submit" class="mb-4 w-full bg-brand hover:bg-brandhover text-brandbuttontext font-light py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+      <button type="submit" class="mb-6 bg-brand hover:bg-brandhover text-brandbuttontext font-light py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+        ADD ITEM
+      </button>
+
+      <button type="submit" class="mb-0 w-full bg-brand hover:bg-brandhover text-brandbuttontext font-light py-2 px-4 rounded focus:outline-none focus:shadow-outline">
         GENERATE PDF
       </button>
 
