@@ -634,16 +634,12 @@ video {
   width: 16.666667%;
 }
 
-.w-6\/12 {
-  width: 50%;
-}
-
-.w-8\/12 {
-  width: 66.666667%;
-}
-
 .w-full {
   width: 100%;
+}
+
+.min-w-24 {
+  min-width: 6rem;
 }
 
 .max-w-32 {
@@ -889,8 +885,16 @@ video {
 }
 
 @media (min-width: 1024px) {
+  .lg\:w-2\/12 {
+    width: 16.666667%;
+  }
+
   .lg\:w-3\/12 {
     width: 25%;
+  }
+
+  .lg\:w-8\/12 {
+    width: 66.666667%;
   }
 
   .lg\:gap-0 {
