@@ -33,6 +33,14 @@ public class Company extends AbstractModel{
     @NotBlank
     private String taxNumber;
 
+    @NotNull
+    @NotBlank
+    private String primaryColor;
+
+    @NotNull
+    @NotBlank
+    private String secondaryColor;
+
     public String getName() {
         return name;
     }
@@ -87,6 +95,22 @@ public class Company extends AbstractModel{
 
     public void setTaxNumber(String taxNumber) {
         this.taxNumber = taxNumber;
+    }
+
+    public String getPrimaryColor() {
+        return primaryColor;
+    }
+
+    public void setPrimaryColor(String primaryColor) {
+        this.primaryColor = primaryColor;
+    }
+
+    public String getSecondaryColor() {
+        return secondaryColor;
+    }
+
+    public void setSecondaryColor(String secondaryColor) {
+        this.secondaryColor = secondaryColor;
     }
 
     @Override

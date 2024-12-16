@@ -1,11 +1,9 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome</title>
-    <link rel="stylesheet" th:href="@{/css/output.css}">
-    <link rel="stylesheet" th:href="@{css/custom.css}">
+    <thymeleaf th:replace="head :: head" />
+    <title>Simple Quotes - Index</title>
 </head>
+
 <body class="text-white bg-neutral-800 flex justify-center items-center flex-col min-h-screen">
 
 <header class="p-6">

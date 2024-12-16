@@ -1,5 +1,6 @@
 package com.ssaxel03.simplequote.daos;
 
+import com.ssaxel03.simplequote.model.Item;
 import com.ssaxel03.simplequote.model.Model;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
@@ -41,7 +42,7 @@ public abstract class GenericDao<T extends Model> implements Dao<T> {
     }
 
     @Override
-    public void delete(Integer id) {
-        em.remove(em.find(modelType, id));
+    public void delete(T modelObject) {
+        em.remove(modelObject);
     }
 }
