@@ -13,4 +13,5 @@ public interface Dao<T extends Model> {
     T findById(Integer id);
     T saveOrUpdate(T modelObject);
     void delete(T modelObject);
+    T findByField(String fieldName, Object value);
 }

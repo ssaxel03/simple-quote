@@ -8,11 +8,8 @@
 
 <body class="text-white bg-neutral-800 flex justify-center items-center flex-col min-h-screen h-auto w-full">
 
-  <header class="p-6">
-    <a th:href="@{/}">
-      <img class="max-h-32 max-w-32" th:src="@{images/logo.png}" alt="Simple Quotes logo image">
-    </a>
-  </header>
+<thymeleaf th:replace="header :: header" />
+
   <main class="flex flex-wrap flex-1 w-full h-full min-h-0 justify-center items-center p-1 lg:p-8">
     <div class="bg-neutral-700 p-8 rounded-lg shadow-lg w-11/12 max-w-7xl min-h-full">
 
@@ -238,10 +235,9 @@
     </div>
   </main>
 
-  <footer class="p-6 text-white">
-    Made by <a class="text-brand" href="https://github.com/ssaxel03">Axel</a>
-  </footer>
-  <script src="/js/document.js"></script>
+<thymeleaf th:replace="footer :: footer" />
+
+<script src="/js/document.js"></script>
 </body>
 
 </html>

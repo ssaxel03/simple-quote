@@ -5,58 +5,58 @@
     <title>Simple Quotes - Company details</title>
 </head>
 
-<body class="text-white bg-neutral-800 flex justify-center items-center flex-col min-h-screen">
+<body class="text-white bg-neutral-800 flex justify-center items-center flex-col min-h-screen h-auto w-full">
 
 <header class="p-6">
     <a th:href="@{/}">
         <img class="max-h-32 max-w-32" th:src="@{images/logo.png}" alt="Simple Quotes logo image">
     </a>
 </header>
-<main class="flex flex-wrap flex-grow content-center justify-center w-full">
+<main class="flex flex-wrap flex-1 w-full h-full min-h-0 justify-center items-center p-1 lg:p-8">
     <div class="bg-neutral-700 p-8 rounded-lg shadow-lg w-11/12 max-w-lg">
-        <h2 class="text-2xl font-medium text-center text-brand mb-6">Your company details</h2>
+        <h2 class="text-2xl font-medium text-brand mb-6">Your company details</h2>
 
         <!-- Company details Form -->
         <form class="mb-0" th:action="@{/company/edit}" method="post">
             <!-- Name Field -->
             <div class="mb-4">
                 <label for="name" class="block text-base font-regular">Name <span class="text-brand">*</span></label>
-                <input type="text" id="name" name="name" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-gray-900" required>
+                <input type="text" id="name" name="name" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-brand focus:border-brand text-gray-900" required>
             </div>
 
             <!-- Tax number Field -->
             <div class="mb-4">
                 <label for="taxNumber" class="block text-base font-regular">Tax number <span class="text-brand">*</span></label>
-                <input type="text" id="taxNumber" name="taxNumber" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-gray-900" required>
+                <input type="text" id="taxNumber" name="taxNumber" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-brand focus:border-brand text-gray-900" required>
             </div>
             <!-- Address Field -->
             <div class="mb-4">
                 <label for="address" class="block text-base font-regular">Address <span class="text-brand">*</span></label>
-                <input type="text" id="address" name="address" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-gray-900" required>
+                <input type="text" id="address" name="address" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-brand focus:border-brand text-gray-900" required>
             </div>
 
             <!-- Phone no Field -->
             <div class="mb-4">
                 <label for="phoneNo" class="block text-base font-regular">Phone number <span class="text-brand">*</span></label>
-                <input type="tel" id="phoneNo" name="phoneNo" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-gray-900" required>
+                <input type="tel" id="phoneNo" name="phoneNo" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-brand focus:border-brand text-gray-900" required>
             </div>
 
             <!-- Email Field -->
             <div class="mb-4">
                 <label for="email" class="block text-base font-regular">Email address</label>
-                <input type="email" id="email" name="email" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-gray-900">
+                <input type="email" id="email" name="email" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-brand focus:border-brand text-gray-900">
             </div>
 
             <!-- Website Field -->
             <div class="mb-4">
                 <label for="website" class="block text-base font-regular">Website URL</label>
-                <input type="text" id="website" name="website" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-gray-900">
+                <input type="text" id="website" name="website" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-brand focus:border-brand text-gray-900">
             </div>
 
 
             <!-- Error Message (if any) -->
             <div class="text-red-500 text-sm mb-4">
-                <p th:if="${param.error}" th:text="'Invalid username or password. Please try again.'"></p>
+                <p th:if="${param.error}" th:text="'Invalid input. Please try again.'"></p>
             </div>
 
             <div class="text-brand text-sm mb-4">
@@ -70,14 +70,10 @@
                 </button>
             </div>
         </form>
-
-        <div class="separator mb-4">OR</div>
     </div>
 </main>
 
-<footer class="p-6 text-white">
-    Made by <a class="text-brand" href="https://github.com/ssaxel03">Axel</a>
-</footer>
+<thymeleaf th:replace="footer :: footer" />
 
 </body>
 </html>

@@ -17,6 +17,10 @@ public class User extends AbstractModel{
     @NotBlank
     private String password;
 
+    @NotNull
+    @NotBlank
+    private String role;
+
     @OneToMany(
             // propagate changes on user entity to item entities
             cascade = CascadeType.ALL,
@@ -36,6 +40,46 @@ public class User extends AbstractModel{
     @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     @JoinColumn(name = "company_id", referencedColumnName = "id")
     private Company company;
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
+    public List<Item> getItems() {
+        return items;
+    }
+
+    public void setItems(List<Item> items) {
+        this.items = items;
+    }
+
+    public Company getCompany() {
+        return company;
+    }
+
+    public void setCompany(Company company) {
+        this.company = company;
+    }
 
     @Override
     public String toString() {
