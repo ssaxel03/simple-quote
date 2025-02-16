@@ -1,0 +1,66 @@
+<!DOCTYPE html >
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" th:href="@{/css/output.css}">
+    <link rel="stylesheet" th:href="@{css/custom.css}">
+</head>
+<body class="text-white bg-neutral-800 flex justify-center items-center flex-col min-h-screen">
+
+<header class="p-6">
+    <a th:href="@{/}">
+        <img class="max-h-32 max-w-32" th:src="@{images/logo.png}" alt="Simple Quotes logo image">
+    </a>
+</header>
+<main class="flex flex-wrap flex-grow content-center justify-center w-full">
+<div class="bg-neutral-700 p-8 rounded-lg shadow-lg w-11/12 sm:w-96">
+    <h2 class="text-2xl font-medium text-center text-brand mb-6">Login</h2>
+
+    <!-- Login Form -->
+    <form class="mb-0" th:action="@{/login}" method="post">
+        <!-- Username Field -->
+        <div class="mb-4">
+            <label for="username" class="block text-base font-regular">Username</label>
+            <input type="text" id="username" name="username" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-gray-900" required>
+        </div>
+
+        <!-- Password Field -->
+        <div class="mb-4">
+            <label for="password" class="block text-base font-regular">Password</label>
+            <input type="password" id="password" name="password" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-gray-900" required>
+        </div>
+
+        <!-- Error Message (if any) -->
+        <div class="text-red-500 text-sm mb-4">
+            <p th:if="${param.error}" th:text="'Invalid username or password. Please try again.'"></p>
+        </div>
+
+        <!-- Submit Button -->
+        <div>
+            <button type="submit" class="mb-4 w-full bg-brand hover:bg-brandhover text-brandbuttontext font-light py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                SUBMIT
+            </button>
+        </div>
+    </form>
+
+        <div class="separator mb-4">OR</div>
+
+    <form class="mb-0" th:action="@{/login?role=guest}" method="post">
+        <!-- Use as guest -->
+        <div>
+            <button type="submit" class="mb-4 w-full bg-brand hover:bg-brandhover text-brandbuttontext font-light py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                USE AS GUEST
+            </button>
+        </div>
+    </form>
+</div>
+</main>
+
+<footer class="p-6 text-white">
+    Made by <a class="text-brand" href="https://github.com/ssaxel03">Axel</a>
+</footer>
+
+</body>
+</html>
